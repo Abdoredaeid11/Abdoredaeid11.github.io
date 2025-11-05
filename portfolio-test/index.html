@@ -130,7 +130,7 @@
         }
         
         .hero-title span {
-            color: var(--text-secondary); /* تغيير لون اسم العائلة ليتناسب مع الخلفية الداكنة */
+            color: var(--text-secondary);
         }
         
         .hero-description {
@@ -289,7 +289,12 @@
             font-size: 0.9rem;
         }
         
-        /* قسم الخبرة (الجديد) */
+        .cv-download {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* قسم الخبرة */
         .experience-list {
             position: relative;
             padding-right: 20px;
@@ -629,7 +634,7 @@
                 <p class="hero-subtitle">مرحبًا، أنا</p>
                 <h1 class="hero-title">عبدالرحمن <span>رضا عيد</span></h1>
                 <p class="hero-description">
-                    **Junior Laravel Developer** بخبرة عملية في بناء واجهات برمجية آمنة (RESTful APIs) ولوحات تحكم قابلة للتوسع. شغوف بالكود النظيف، التعلم المستمر، والمساهمة في تطبيقات الويب ذات التأثير الكبير.
+                    مهندس برمجيات | مطور PHP مبتدئ بخبرة عملية في بناء واجهات برمجية آمنة (RESTful APIs) ولوحات تحكم قابلة للتوسع. شغوف بالكود النظيف، التعلم المستمر، والمساهمة في تطبيقات الويب ذات التأثير الكبير.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">شاهد مشاريعي</a>
@@ -650,23 +655,24 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        أنا مطور **Laravel** (PHP) مبتدئ بخبرة عملية في إنشاء تطبيقات ويب قوية ومستقرة. أركز على تطوير **الـ Backend** وبناء أنظمة مصادقة متينة، واستخدام بنية **MVC** لتنظيم الكود.
+                        أنا مطور Laravel مبتدئ بخبرة عملية في إنشاء تطبيقات ويب قوية ومستقرة. أركز على تطوير الـ Backend وبناء أنظمة مصادقة متينة، واستخدام بنية MVC لتنظيم الكود.
                     </p>
                     <p>
-                        أسعى دائمًا لإنتاج كود نظيف وقابل للصيانة، وأمتلك فهمًا قويًا لقواعد البيانات العلائقية (SQL).
-                    </p>
-                    <p>
-                        إنني متحمس للمساهمة في تطبيقات حقيقية عالية الأداء والعمل ضمن فريق تعاوني لتحقيق أفضل النتائج.
+                        أسعى دائمًا لإنتاج كود نظيف وقابل للصيانة، وأمتلك فهمًا قويًا لقواعد البيانات العلائقية (SQL). متحمس للمساهمة في تطبيقات حقيقية عالية الأداء والعمل ضمن فريق تعاوني لتحقيق أفضل النتائج.
                     </p>
                     
                     <div class="education-info">
                         <h4>التعليم</h4>
-                        <p>**بكالوريوس الهندسة**</p>
+                        <p>بكالوريوس الهندسة</p>
                         <span>جامعة المنوفية - تقدير جيد جداً</span>
+                        <div class="cv-download">
+                            <a href="#" class="btn btn-primary">تحميل السيرة الذاتية</a>
+                        </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="صورة شخصية">
+                    <!-- ضع رابط صورتك الشخصية هنا -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="صورة عبدالرحمن رضا عيد">
                 </div>
             </div>
         </div>
@@ -683,14 +689,16 @@
             <div class="experience-list">
                 <div class="experience-item">
                     <h3>PHP Developer</h3>
-                    <p class="company">Vadecom, القاهرة - الجيزة <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a></p>
+                    <p class="company">Vadecom, القاهرة - الجيزة</p>
                     <p class="date">فبراير 2025 - حتى الآن</p>
-                    </div>
+                    <p>أعمل على تطوير وتحسين تطبيقات الويب باستخدام Laravel، مع التركيز على بناء واجهات برمجية آمنة وقابلة للتوسع، وتطوير لوحات التحكم الإدارية.</p>
+                </div>
                 <div class="experience-item">
                     <h3>PHP Developer</h3>
                     <p class="company">Pure Soft, المنوفية</p>
                     <p class="date">يوليو 2023 - يناير 2024</p>
-                    </div>
+                    <p>شاركت في تطوير مشاريع ويب متنوعة باستخدام Laravel، وبناء أنظمة مصادقة متكاملة، والعمل على تحسين أداء التطبيقات وقابليتها للتوسع.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -707,8 +715,8 @@
                 <div class="skill-category">
                     <h3><i class="fas fa-server"></i> التطوير الخلفي (Backend)</h3>
                     <ul class="skill-list">
-                        <li>**PHP**</li>
-                        <li>**Laravel**</li>
+                        <li>PHP</li>
+                        <li>Laravel</li>
                         <li>MySQL</li>
                         <li>RESTful APIs</li>
                         <li>Laravel Cache</li>
@@ -750,13 +758,14 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title"><a href="#" target="_blank">Wedo</a></h3>
+                        <h3 class="project-title">Wedo</h3>
                         <p class="project-description">
-                            ساهمت كجزء من فريق التطوير في تحسين وصيانة المنصة، مع التركيز على ميزات الواجهة الخلفية وتحسين الأداء.
+                            ساهمت كجزء من فريق التطوير في تحسين وصيانة المنصة، مع التركيز على ميزات الواجهة الخلفية وتحسين الأداء. قمت بتطوير وحدات جديدة وتحسين تجربة المستخدم من خلال تحسين سرعة الاستجابة ومعالجة البيانات بكفاءة عالية.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
                             <span>Backend Development</span>
+                            <span>Performance Optimization</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -765,14 +774,15 @@
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title"><a href="#" target="_blank">Mr Fix</a></h3>
+                        <h3 class="project-title">Mr Fix</h3>
                         <p class="project-description">
-                            بناء واجهات برمجية (APIs) ولوحة تحكم إدارية قائمة على Laravel. تم تطبيق نظام KYC متكامل (وجه/خلفية الهوية وصورة شخصية). منصة حية تربط العملاء بمقدمي الخدمات.
+                            بناء واجهات برمجية (APIs) ولوحة تحكم إدارية قائمة على Laravel. تم تطبيق نظام KYC متكامل (وجه/خلفية الهوية وصورة شخصية) باستخدام أحدث تقنيات التحقق. المنصة تربط العملاء بمقدمي الخدمات بشكل آمن وفعال مع نظام تقييم متقدم وإدارة للمعاملات المالية.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
                             <span>APIs</span>
                             <span>KYC System</span>
+                            <span>Payment Integration</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -781,14 +791,15 @@
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title"><a href="#" target="_blank">Alfursan Travel</a></h3>
+                        <h3 class="project-title">Alfursan Travel</h3>
                         <p class="project-description">
-                            مشروع Laravel لحجز الرحلات الجوية مع أدوات للمصادقة وإدارة الحجوزات.
+                            مشروع Laravel متكامل لحجز الرحلات الجوية مع نظام مصادقة متقدم وأدوات متطورة لإدارة الحجوزات. يتضمن النظام إدارة للرحلات والمسافرين وتقارير مالية مفصلة، مع دعم متعدد اللغات والعملات لتلبية احتياجات العملاء عالميًا.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
                             <span>Authentication</span>
-                            <span>Booking</span>
+                            <span>Booking System</span>
+                            <span>Multi-language</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -799,12 +810,30 @@
                     <div class="project-content">
                         <h3 class="project-title">Vadecom Admin Dashboard</h3>
                         <p class="project-description">
-                            ترقية منطق الواجهة الخلفية (Backend) وتحسين واجهة المستخدم (UI) للوحة تحكم Laravel الخاصة بموقع vadecom.net.
+                            ترقية شاملة لمنطق الواجهة الخلفية (Backend) وتحسين واجهة المستخدم (UI) للوحة تحكم Laravel الخاصة بموقع vadecom.net. تضمن المشروع إعادة هيكلة قواعد البيانات، تحسين أداء الاستعلامات، وإضافة ميزات إدارية متقدمة مع واجهة مستبدل أكثر سهولة واستجابة.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
                             <span>UI/UX</span>
-                            <span>Optimization</span>
+                            <span>Database Optimization</span>
+                            <span>Admin Panel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Cement Tec Dashboard</h3>
+                        <p class="project-description">
+                            صيانة وتطوير لوحة التحكم الإدارية لمنصة Cement Tec، مع تحسين العمليات الخلفية وزيادة كفاءة النظام. تضمن العمل إصلاح الأخطاء، تحسين أداء التطبيق، وإضافة ميزات جديدة لدعم احتياجات العمل المتزايدة في مجال صناعة الأسمنت والتشييد.
+                        </p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>System Maintenance</span>
+                            <span>Feature Development</span>
+                            <span>Bug Fixing</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -815,14 +844,17 @@
                     <div class="project-content">
                         <h3 class="project-title">Payroll System - Gomla Trade</h3>
                         <p class="project-description">
-                            نظام كشوف المرتبات. تم تنفيذ ميزة تصدير سجلات الموظفين إلى ملفات Excel باستخدام Laravel.
+                            نظام متكامل لكشوف المرتبات تم تطويره باستخدام Laravel. يتضمن النظام إدارة كاملة للموظفين، حساب الرواتب، الاستقطاعات، والمكافآت. تم تنفيذ ميزة متقدمة لتصدير سجلات الموظفين والتقارير المالية إلى ملفات Excel مع تنسيقات مخصصة تلبي متطلبات المحاسبة والإدارة المالية.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
                             <span>Excel Export</span>
+                            <span>Payroll Management</span>
+                            <span>Financial Reports</span>
                         </div>
                         <div class="project-links">
-                            </div>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -836,13 +868,12 @@
             <div class="contact-content">
                 <h2>تواصل معي</h2>
                 <p>
-                    إذا كنت تبحث عن مطور Laravel شغوف ومجتهد لمشروعك القادم، فلا تتردد في التواصل. أنا متاح دائمًا لمناقشة الفرص الجديدة.
+                    إذا كنت تبحث عن مطور Laravel شغوف ومجتهد لمشروعك القادم، فلا تتردد في التواصل. أنا متاح دائمًا لمناقشة الفرص الجديدة والتعاون في مشاريع مبتكرة.
                 </p>
                 <a href="mailto:abdoredaeid905@gmail.com" class="btn btn-primary">إرسال بريد إلكتروني</a>
             </div>
         </div>
     </section>
-
 
     <footer>
         <div class="container">
@@ -857,10 +888,10 @@
                     <a href="#contact">التواصل</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Abdoredaeid11" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/abdulrahman-reda-6a7742225" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="mailto:abdoredaeid905@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+201068693865"><i class="fas fa-phone"></i></a>
+                    <a href="tel:01068693865"><i class="fas fa-phone"></i></a>
                 </div>
             </div>
             <div class="copyright">
