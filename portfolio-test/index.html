@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl" id="htmlElement">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Abdelrahman Reda Eid</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-dark: #0a192f;
@@ -23,11 +23,19 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'El Messiri', 'Inter', sans-serif;
             background-color: var(--primary-dark);
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        body[dir="ltr"] {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body[dir="rtl"] {
+            font-family: 'El Messiri', sans-serif;
         }
         
         .container {
@@ -62,13 +70,19 @@
             letter-spacing: 1px;
         }
         
+        .nav-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
         .nav-links {
             display: flex;
             list-style: none;
         }
         
         .nav-links li {
-            margin-left: 40px;
+            margin: 0 20px;
         }
         
         .nav-links a {
@@ -85,11 +99,18 @@
             content: '';
             position: absolute;
             bottom: 0;
-            left: 0;
             width: 0;
             height: 2px;
             background-color: var(--accent);
             transition: var(--transition);
+        }
+
+        body[dir="rtl"] .nav-links a::after {
+            right: 0;
+        }
+
+        body[dir="ltr"] .nav-links a::after {
+            left: 0;
         }
         
         .nav-links a:hover::after,
@@ -99,6 +120,38 @@
         
         .nav-links a:hover,
         .nav-links a.active {
+            color: var(--accent);
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 25px;
+            padding: 5px;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .lang-btn.active {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+        
+        .lang-btn:hover:not(.active) {
             color: var(--accent);
         }
         
@@ -196,7 +249,7 @@
             font-size: 1.5rem;
             color: var(--accent);
             font-weight: 700;
-            margin-right: 15px;
+            margin: 0 15px;
         }
         
         .section-title {
@@ -209,10 +262,18 @@
             content: '';
             position: absolute;
             bottom: -15px;
-            left: 0;
-            width: 60px;
             height: 3px;
             background: var(--accent);
+            width: 60px;
+            transition: var(--transition);
+        }
+
+        body[dir="rtl"] .section-title::after {
+            right: 0;
+        }
+
+        body[dir="ltr"] .section-title::after {
+            left: 0;
         }
         
         /* About Section */
@@ -268,7 +329,6 @@
         .image-decoration {
             position: absolute;
             top: -10px;
-            right: -10px;
             width: 50px;
             height: 50px;
             background: var(--accent);
@@ -280,6 +340,14 @@
             font-size: 1.2rem;
             animation: float 3s ease-in-out infinite;
         }
+
+        body[dir="rtl"] .image-decoration {
+            right: -10px;
+        }
+
+        body[dir="ltr"] .image-decoration {
+            left: -10px;
+        }
         
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -289,8 +357,19 @@
         .education-info {
             margin-top: 30px;
             padding: 20px;
-            border-left: 3px solid var(--accent);
             background-color: var(--primary-light);
+            border-radius: 5px;
+            transition: var(--transition);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        body[dir="rtl"] .education-info {
+            border-right: 3px solid var(--accent);
+            border-radius: 0 5px 5px 0;
+        }
+
+        body[dir="ltr"] .education-info {
+            border-left: 3px solid var(--accent);
             border-radius: 5px 0 0 5px;
         }
         
@@ -319,6 +398,13 @@
         /* Experience Section */
         .experience-list {
             position: relative;
+        }
+
+        body[dir="rtl"] .experience-list {
+            padding-right: 20px;
+        }
+
+        body[dir="ltr"] .experience-list {
             padding-left: 20px;
         }
         
@@ -327,13 +413,28 @@
             padding: 20px;
             border-radius: 5px;
             background-color: var(--primary-light);
-            border-right: 3px solid var(--accent);
             transition: var(--transition);
+        }
+
+        body[dir="rtl"] .experience-item {
+            border-left: 3px solid var(--accent);
+        }
+
+        body[dir="ltr"] .experience-item {
+            border-right: 3px solid var(--accent);
         }
         
         .experience-item:hover {
             box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-            transform: translateX(5px);
+            transform: translateX(var(--hover-translate));
+        }
+
+        body[dir="rtl"] .experience-item:hover {
+            --hover-translate: -5px;
+        }
+
+        body[dir="ltr"] .experience-item:hover {
+            --hover-translate: 5px;
         }
         
         .experience-item h3 {
@@ -635,22 +736,41 @@
                 width: 250px;
                 height: 250px;
             }
+
+            .nav-content {
+                gap: 15px;
+            }
+
+            .language-switcher {
+                padding: 3px;
+            }
+
+            .lang-btn {
+                padding: 6px 12px;
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
-<body>
+<body dir="rtl">
     <header>
         <div class="container">
             <nav>
                 <div class="logo">Abdelrahman Eid</div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <div class="nav-content">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                        <li><a href="#about" data-ar="عنّي" data-en="About">عنّي</a></li>
+                        <li><a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a></li>
+                        <li><a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a></li>
+                        <li><a href="#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+                        <li><a href="#contact" data-ar="التواصل" data-en="Contact">التواصل</a></li>
+                    </ul>
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="ar">العربية</button>
+                        <button class="lang-btn" data-lang="en">English</button>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -658,14 +778,14 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <p class="hero-subtitle">Hi, I'm</p>
-                <h1 class="hero-title">Abdelrahman <span>Reda Eid</span></h1>
-                <p class="hero-description">
-                    Software Engineer | PHP Developer with practical experience in building secure RESTful APIs and scalable dashboards. Passionate about clean code, continuous learning, and contributing to high-impact web applications.
+                <p class="hero-subtitle" data-ar="مرحبًا، أنا" data-en="Hi, I'm">مرحبًا، أنا</p>
+                <h1 class="hero-title">عبدالرحمن <span>رضا عيد</span></h1>
+                <p class="hero-description" data-ar="مهندس برمجيات | مطور PHP بخبرة عملية في بناء واجهات برمجية آمنة (RESTful APIs) ولوحات تحكم قابلة للتوسع. شغوف بالكود النظيف، التعلم المستمر، والمساهمة في تطبيقات الويب ذات التأثير الكبير." data-en="Software Engineer | PHP Developer with practical experience in building secure RESTful APIs and scalable dashboards. Passionate about clean code, continuous learning, and contributing to high-impact web applications.">
+                    مهندس برمجيات | مطور PHP بخبرة عملية في بناء واجهات برمجية آمنة (RESTful APIs) ولوحات تحكم قابلة للتوسع. شغوف بالكود النظيف، التعلم المستمر، والمساهمة في تطبيقات الويب ذات التأثير الكبير.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary" data-ar="شاهد مشاريعي" data-en="View My Work">شاهد مشاريعي</a>
+                    <a href="#contact" class="btn btn-outline" data-ar="تواصل معي" data-en="Get In Touch">تواصل معي</a>
                 </div>
             </div>
         </div>
@@ -677,33 +797,31 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">01.</span>
-                <h2 class="section-title">About Me & Education</h2>
+                <h2 class="section-title" data-ar="عنّي والتعليم" data-en="About Me & Education">عنّي والتعليم</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        I'm a Junior Laravel Developer with practical experience in creating robust and stable web applications. I focus on Backend development, building secure authentication systems, and using MVC architecture to organize code.
+                    <p data-ar="أنا مطور Laravel مبتدئ بخبرة عملية في إنشاء تطبيقات ويب قوية ومستقرة. أركز على تطوير الـ Backend وبناء أنظمة مصادقة متينة، واستخدام بنية MVC لتنظيم الكود." data-en="I'm a Junior Laravel Developer with practical experience in creating robust and stable web applications. I focus on Backend development, building secure authentication systems, and using MVC architecture to organize code.">
+                        أنا مطور Laravel مبتدئ بخبرة عملية في إنشاء تطبيقات ويب قوية ومستقرة. أركز على تطوير الـ Backend وبناء أنظمة مصادقة متينة، واستخدام بنية MVC لتنظيم الكود.
                     </p>
-                    <p>
-                        I always strive to produce clean and maintainable code, and I have a strong understanding of relational databases (SQL). I'm excited to contribute to real-world high-performance applications and work within collaborative teams to achieve the best results.
+                    <p data-ar="أسعى دائمًا لإنتاج كود نظيف وقابل للصيانة، وأمتلك فهمًا قويًا لقواعد البيانات العلائقية (SQL). متحمس للمساهمة في تطبيقات حقيقية عالية الأداء والعمل ضمن فريق تعاوني لتحقيق أفضل النتائج." data-en="I always strive to produce clean and maintainable code, and I have a strong understanding of relational databases (SQL). I'm excited to contribute to real-world high-performance applications and work within collaborative teams to achieve the best results.">
+                        أسعى دائمًا لإنتاج كود نظيف وقابل للصيانة، وأمتلك فهمًا قويًا لقواعد البيانات العلائقية (SQL). متحمس للمساهمة في تطبيقات حقيقية عالية الأداء والعمل ضمن فريق تعاوني لتحقيق أفضل النتائج.
                     </p>
                     
                     <div class="education-info">
-                        <h4>Education</h4>
-                        <p>Bachelor of Engineering</p>
-                        <span>Menofia University - Very Good Grade</span>
+                        <h4 data-ar="التعليم" data-en="Education">التعليم</h4>
+                        <p data-ar="بكالوريوس الهندسة" data-en="Bachelor of Engineering">بكالوريوس الهندسة</p>
+                        <span data-ar="جامعة المنوفية - تقدير جيد جداً" data-en="Menofia University - Very Good Grade">جامعة المنوفية - تقدير جيد جداً</span>
                         <div class="cv-download">
-                            <a href="Abdelrahman_Reda.pdf" class="btn btn-primary">Download CV</a>
+                            <a href="Abdelrahman_Reda.pdf" class="btn btn-primary" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية</a>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <!-- New image design -->
                     <div class="image-container">
                         <div class="image-decoration">
                             <i class="fas fa-code"></i>
                         </div>
-                        <!-- External image link -->
                         <img src="abdo.jpg" alt="Abdelrahman Reda Eid" class="profile-img">
                     </div>
                 </div>
@@ -717,20 +835,24 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">02.</span>
-                <h2 class="section-title">Work Experience</h2>
+                <h2 class="section-title" data-ar="الخبرة العملية" data-en="Work Experience">الخبرة العملية</h2>
             </div>
             <div class="experience-list">
                 <div class="experience-item">
                     <h3>PHP Developer</h3>
                     <p class="company">Vadecom, Cairo - Giza</p>
-                    <p class="date">February 2025 - Present</p>
-                    <p>Working on developing and improving web applications using Laravel, focusing on building secure and scalable APIs, and developing admin dashboards.</p>
+                    <p class="date" data-ar="فبراير 2025 - حتى الآن" data-en="February 2025 - Present">فبراير 2025 - حتى الآن</p>
+                    <p data-ar="أعمل على تطوير وتحسين تطبيقات الويب باستخدام Laravel، مع التركيز على بناء واجهات برمجية آمنة وقابلة للتوسع، وتطوير لوحات التحكم الإدارية." data-en="Working on developing and improving web applications using Laravel, focusing on building secure and scalable APIs, and developing admin dashboards.">
+                        أعمل على تطوير وتحسين تطبيقات الويب باستخدام Laravel، مع التركيز على بناء واجهات برمجية آمنة وقابلة للتوسع، وتطوير لوحات التحكم الإدارية.
+                    </p>
                 </div>
                 <div class="experience-item">
                     <h3>PHP Developer</h3>
                     <p class="company">Pure Soft, Menofia</p>
-                    <p class="date">July 2023 - January 2024</p>
-                    <p>Participated in developing various web projects using Laravel, building integrated authentication systems, and working on improving application performance and scalability.</p>
+                    <p class="date" data-ar="يوليو 2023 - يناير 2024" data-en="July 2023 - January 2024">يوليو 2023 - يناير 2024</p>
+                    <p data-ar="شاركت في تطوير مشاريع ويب متنوعة باستخدام Laravel، وبناء أنظمة مصادقة متكاملة، والعمل على تحسين أداء التطبيقات وقابليتها للتوسع." data-en="Participated in developing various web projects using Laravel, building integrated authentication systems, and working on improving application performance and scalability.">
+                        شاركت في تطوير مشاريع ويب متنوعة باستخدام Laravel، وبناء أنظمة مصادقة متكاملة، والعمل على تحسين أداء التطبيقات وقابليتها للتوسع.
+                    </p>
                 </div>
             </div>
         </div>
@@ -742,11 +864,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">03.</span>
-                <h2 class="section-title">Technical Skills</h2>
+                <h2 class="section-title" data-ar="المهارات التقنية" data-en="Technical Skills">المهارات التقنية</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <h3><i class="fas fa-server"></i> <span data-ar="التطوير الخلفي (Backend)" data-en="Backend Development">التطوير الخلفي (Backend)</span></h3>
                     <ul class="skill-list">
                         <li>PHP</li>
                         <li>Laravel</li>
@@ -757,23 +879,23 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Frontend Development</h3>
+                    <h3><i class="fas fa-code"></i> <span data-ar="التطوير الأمامي (Frontend)" data-en="Frontend Development">التطوير الأمامي (Frontend)</span></h3>
                     <ul class="skill-list">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
                         <li>Bootstrap</li>
-                        <li>Responsive Design</li>
+                        <li data-ar="التصميم المتجاوب" data-en="Responsive Design">التصميم المتجاوب</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Processes</h3>
+                    <h3><i class="fas fa-tools"></i> <span data-ar="الأدوات والعمليات" data-en="Tools & Processes">الأدوات والعمليات</span></h3>
                     <ul class="skill-list">
                         <li>Git & GitHub</li>
                         <li>Composer</li>
-                        <li>MVC Architecture</li>
-                        <li>Authentication Systems</li>
-                        <li>Database Management</li>
+                        <li data-ar="هندسة MVC" data-en="MVC Architecture">هندسة MVC</li>
+                        <li data-ar="أنظمة المصادقة" data-en="Authentication Systems">أنظمة المصادقة</li>
+                        <li data-ar="إدارة قواعد البيانات" data-en="Database Management">إدارة قواعد البيانات</li>
                     </ul>
                 </div>
             </div>
@@ -786,19 +908,19 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">04.</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title" data-ar="أبرز المشاريع" data-en="Featured Projects">أبرز المشاريع</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Wedo</h3>
-                        <p class="project-description">
-                            Contributed as part of a development team to enhance and maintain the platform, focusing on backend features and performance improvements. Developed new modules and improved user experience through response speed optimization and efficient data processing.
+                        <p class="project-description" data-ar="ساهمت كجزء من فريق التطوير في تحسين وصيانة المنصة، مع التركيز على ميزات الواجهة الخلفية وتحسين الأداء. قمت بتطوير وحدات جديدة وتحسين تجربة المستخدم من خلال تحسين سرعة الاستجابة ومعالجة البيانات بكفاءة عالية." data-en="Contributed as part of a development team to enhance and maintain the platform, focusing on backend features and performance improvements. Developed new modules and improved user experience through response speed optimization and efficient data processing.">
+                            ساهمت كجزء من فريق التطوير في تحسين وصيانة المنصة، مع التركيز على ميزات الواجهة الخلفية وتحسين الأداء. قمت بتطوير وحدات جديدة وتحسين تجربة المستخدم من خلال تحسين سرعة الاستجابة ومعالجة البيانات بكفاءة عالية.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
-                            <span>Backend Development</span>
-                            <span>Performance Optimization</span>
+                            <span data-ar="تطوير Backend" data-en="Backend Development">تطوير Backend</span>
+                            <span data-ar="تحسين الأداء" data-en="Performance Optimization">تحسين الأداء</span>
                         </div>
                         <div class="project-links">
                             <a href="https://www.wedo.com.sa" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -808,14 +930,14 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Mr Fix</h3>
-                        <p class="project-description">
-                            Built APIs and Laravel-based admin dashboard. Implemented a complete KYC system (ID front/back & selfie) using the latest verification technologies. Live platform connecting clients and service providers securely and effectively with advanced rating system and transaction management.
+                        <p class="project-description" data-ar="بناء واجهات برمجية (APIs) ولوحة تحكم إدارية قائمة على Laravel. تم تطبيق نظام KYC متكامل (وجه/خلفية الهوية وصورة شخصية) باستخدام أحدث تقنيات التحقق. المنصة تربط العملاء بمقدمي الخدمات بشكل آمن وفعال مع نظام تقييم متقدم وإدارة للمعاملات المالية." data-en="Built APIs and Laravel-based admin dashboard. Implemented a complete KYC system (ID front/back & selfie) using the latest verification technologies. Live platform connecting clients and service providers securely and effectively with advanced rating system and transaction management.">
+                            بناء واجهات برمجية (APIs) ولوحة تحكم إدارية قائمة على Laravel. تم تطبيق نظام KYC متكامل (وجه/خلفية الهوية وصورة شخصية) باستخدام أحدث تقنيات التحقق. المنصة تربط العملاء بمقدمي الخدمات بشكل آمن وفعال مع نظام تقييم متقدم وإدارة للمعاملات المالية.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
                             <span>APIs</span>
-                            <span>KYC System</span>
-                            <span>Payment Integration</span>
+                            <span data-ar="نظام KYC" data-en="KYC System">نظام KYC</span>
+                            <span data-ar="دمج الدفع" data-en="Payment Integration">دمج الدفع</span>
                         </div>
                         <div class="project-links">
                             <a href="https://mr-fix.org/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -825,14 +947,14 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Alfursan Travel</h3>
-                        <p class="project-description">
-                            Complete Laravel project for flight booking with advanced authentication and sophisticated booking management tools. Includes flight and passenger management, detailed financial reports, with multi-language and multi-currency support to meet global customer needs.
+                        <p class="project-description" data-ar="مشروع Laravel متكامل لحجز الرحلات الجوية مع نظام مصادقة متقدم وأدوات متطورة لإدارة الحجوزات. يتضمن النظام إدارة للرحلات والمسافرين وتقارير مالية مفصلة، مع دعم متعدد اللغات والعملات لتلبية احتياجات العملاء عالميًا." data-en="Complete Laravel project for flight booking with advanced authentication and sophisticated booking management tools. Includes flight and passenger management, detailed financial reports, with multi-language and multi-currency support to meet global customer needs.">
+                            مشروع Laravel متكامل لحجز الرحلات الجوية مع نظام مصادقة متقدم وأدوات متطورة لإدارة الحجوزات. يتضمن النظام إدارة للرحلات والمسافرين وتقارير مالية مفصلة، مع دعم متعدد اللغات والعملات لتلبية احتياجات العملاء عالميًا.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
-                            <span>Authentication</span>
-                            <span>Booking System</span>
-                            <span>Multi-language</span>
+                            <span data-ar="المصادقة" data-en="Authentication">المصادقة</span>
+                            <span data-ar="نظام الحجوزات" data-en="Booking System">نظام الحجوزات</span>
+                            <span data-ar="متعدد اللغات" data-en="Multi-language">متعدد اللغات</span>
                         </div>
                         <div class="project-links">
                             <a href="https://alfursantravel.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -842,14 +964,14 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Vadecom Admin Dashboard</h3>
-                        <p class="project-description">
-                            Comprehensive upgrade of backend logic and UI improvement for vadecom.net's Laravel dashboard. Included database restructuring, query performance optimization, and addition of advanced administrative features with more user-friendly and responsive interface.
+                        <p class="project-description" data-ar="ترقية شاملة لمنطق الواجهة الخلفية (Backend) وتحسين واجهة المستخدم (UI) للوحة تحكم Laravel الخاصة بموقع vadecom.net. تضمن المشروع إعادة هيكلة قواعد البيانات، تحسين أداء الاستعلامات، وإضافة ميزات إدارية متقدمة مع واجهة مستخدم أكثر سهولة واستجابة." data-en="Comprehensive upgrade of backend logic and UI improvement for vadecom.net's Laravel dashboard. Included database restructuring, query performance optimization, and addition of advanced administrative features with more user-friendly and responsive interface.">
+                            ترقية شاملة لمنطق الواجهة الخلفية (Backend) وتحسين واجهة المستخدم (UI) للوحة تحكم Laravel الخاصة بموقع vadecom.net. تضمن المشروع إعادة هيكلة قواعد البيانات، تحسين أداء الاستعلامات، وإضافة ميزات إدارية متقدمة مع واجهة مستخدم أكثر سهولة واستجابة.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
                             <span>UI/UX</span>
-                            <span>Database Optimization</span>
-                            <span>Admin Panel</span>
+                            <span data-ar="تحسين قواعد البيانات" data-en="Database Optimization">تحسين قواعد البيانات</span>
+                            <span data-ar="لوحة التحكم" data-en="Admin Panel">لوحة التحكم</span>
                         </div>
                         <div class="project-links">
                             <a href="https://vadecom.net" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -859,14 +981,14 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Cement Tec Dashboard</h3>
-                        <p class="project-description">
-                            Maintenance and development of Cement Tec platform's admin dashboard, with backend process improvements and increased system efficiency. Included bug fixes, application performance optimization, and adding new features to support growing business needs in cement and construction industry.
+                        <p class="project-description" data-ar="صيانة وتطوير لوحة التحكم الإدارية لمنصة Cement Tec، مع تحسين العمليات الخلفية وزيادة كفاءة النظام. تضمن العمل إصلاح الأخطاء، تحسين أداء التطبيق، وإضافة ميزات جديدة لدعم احتياجات العمل المتزايدة في مجال صناعة الأسمنت والتشييد." data-en="Maintenance and development of Cement Tec platform's admin dashboard, with backend process improvements and increased system efficiency. Included bug fixes, application performance optimization, and adding new features to support growing business needs in cement and construction industry.">
+                            صيانة وتطوير لوحة التحكم الإدارية لمنصة Cement Tec، مع تحسين العمليات الخلفية وزيادة كفاءة النظام. تضمن العمل إصلاح الأخطاء، تحسين أداء التطبيق، وإضافة ميزات جديدة لدعم احتياجات العمل المتزايدة في مجال صناعة الأسمنت والتشييد.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
-                            <span>System Maintenance</span>
-                            <span>Feature Development</span>
-                            <span>Bug Fixing</span>
+                            <span data-ar="صيانة النظام" data-en="System Maintenance">صيانة النظام</span>
+                            <span data-ar="تطوير الميزات" data-en="Feature Development">تطوير الميزات</span>
+                            <span data-ar="إصلاح الأخطاء" data-en="Bug Fixing">إصلاح الأخطاء</span>
                         </div>
                         <div class="project-links">
                             <a href="https://cement-tec.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -876,14 +998,14 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Payroll System - Gomla Trade</h3>
-                        <p class="project-description">
-                            Comprehensive payroll system developed using Laravel. Includes complete employee management, salary calculation, deductions, and bonuses. Implemented advanced feature for exporting employee records and financial reports to Excel files with custom formats meeting accounting and financial management requirements.
+                        <p class="project-description" data-ar="نظام متكامل لكشوف المرتبات تم تطويره باستخدام Laravel. يتضمن النظام إدارة كاملة للموظفين، حساب الرواتب، الاستقطاعات، والمكافآت. تم تنفيذ ميزة متقدمة لتصدير سجلات الموظفين والتقارير المالية إلى ملفات Excel مع تنسيقات مخصصة تلبي متطلبات المحاسبة والإدارة المالية." data-en="Comprehensive payroll system developed using Laravel. Includes complete employee management, salary calculation, deductions, and bonuses. Implemented advanced feature for exporting employee records and financial reports to Excel files with custom formats meeting accounting and financial management requirements.">
+                            نظام متكامل لكشوف المرتبات تم تطويره باستخدام Laravel. يتضمن النظام إدارة كاملة للموظفين، حساب الرواتب، الاستقطاعات، والمكافآت. تم تنفيذ ميزة متقدمة لتصدير سجلات الموظفين والتقارير المالية إلى ملفات Excel مع تنسيقات مخصصة تلبي متطلبات المحاسبة والإدارة المالية.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
-                            <span>Excel Export</span>
-                            <span>Payroll Management</span>
-                            <span>Financial Reports</span>
+                            <span data-ar="تصدير Excel" data-en="Excel Export">تصدير Excel</span>
+                            <span data-ar="إدارة المرتبات" data-en="Payroll Management">إدارة المرتبات</span>
+                            <span data-ar="التقارير المالية" data-en="Financial Reports">التقارير المالية</span>
                         </div>
                         <div class="project-links">
                             <a href="https://payroll.gomlatrade.net/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -899,11 +1021,11 @@
     <section id="contact" class="section contact">
         <div class="container">
             <div class="contact-content">
-                <h2>Get In Touch</h2>
-                <p>
-                    If you're looking for a passionate and dedicated Laravel developer for your next project, don't hesitate to reach out. I'm always available to discuss new opportunities and collaborate on innovative projects.
+                <h2 data-ar="تواصل معي" data-en="Get In Touch">تواصل معي</h2>
+                <p data-ar="إذا كنت تبحث عن مطور Laravel شغوف ومجتهد لمشروعك القادم، فلا تتردد في التواصل. أنا متاح دائمًا لمناقشة الفرص الجديدة والتعاون في مشاريع مبتكرة." data-en="If you're looking for a passionate and dedicated Laravel developer for your next project, don't hesitate to reach out. I'm always available to discuss new opportunities and collaborate on innovative projects.">
+                    إذا كنت تبحث عن مطور Laravel شغوف ومجتهد لمشروعك القادم، فلا تتردد في التواصل. أنا متاح دائمًا لمناقشة الفرص الجديدة والتعاون في مشاريع مبتكرة.
                 </p>
-                <a href="mailto:abdoredaeid905@gmail.com" class="btn btn-primary">Send Email</a>
+                <a href="mailto:abdoredaeid905@gmail.com" class="btn btn-primary" data-ar="إرسال بريد إلكتروني" data-en="Send Email">إرسال بريد إلكتروني</a>
             </div>
         </div>
     </section>
@@ -913,12 +1035,12 @@
             <div class="footer-content">
                 <div class="footer-logo">Abdelrahman Eid</div>
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="#about" data-ar="عنّي" data-en="About">عنّي</a>
+                    <a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a>
+                    <a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a>
+                    <a href="#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+                    <a href="#contact" data-ar="التواصل" data-en="Contact">التواصل</a>
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/Abdoredaeid11" target="_blank"><i class="fab fa-github"></i></a>
@@ -928,12 +1050,74 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2023 All Rights Reserved | Designed & Developed by Abdelrahman Reda Eid</p>
+                <p data-ar="© 2023 جميع الحقوق محفوظة | تم التصميم والتطوير بواسطة عبدالرحمن رضا عيد" data-en="© 2023 All Rights Reserved | Designed & Developed by Abdelrahman Reda Eid">
+                    © 2023 جميع الحقوق محفوظة | تم التصميم والتطوير بواسطة عبدالرحمن رضا عيد
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Language switching functionality
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const htmlElement = document.documentElement;
+        const bodyElement = document.body;
+
+        function switchLanguage(lang) {
+            // Update active button
+            langButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update HTML direction and lang attribute
+            if (lang === 'ar') {
+                htmlElement.dir = 'rtl';
+                htmlElement.lang = 'ar';
+                bodyElement.dir = 'rtl';
+            } else {
+                htmlElement.dir = 'ltr';
+                htmlElement.lang = 'en';
+                bodyElement.dir = 'ltr';
+            }
+
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-ar]').forEach(element => {
+                if (lang === 'ar') {
+                    element.textContent = element.dataset.ar;
+                } else {
+                    element.textContent = element.dataset.en;
+                }
+            });
+
+            // Update button texts
+            document.querySelectorAll('.btn').forEach(btn => {
+                if (btn.dataset.ar && btn.dataset.en) {
+                    if (lang === 'ar') {
+                        btn.textContent = btn.dataset.ar;
+                    } else {
+                        btn.textContent = btn.dataset.en;
+                    }
+                }
+            });
+
+            // Save preference to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Event listeners for language buttons
+        langButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                switchLanguage(button.dataset.lang);
+            });
+        });
+
+        // Check for saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
+        switchLanguage(savedLang);
+
         // Smooth scrolling effects
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
