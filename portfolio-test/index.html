@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بورتفوليو | عبدالرحمن رضا عيد</title>
+    <title>Portfolio | Abdelrahman Reda Eid</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-dark: #0a192f;
@@ -16,28 +15,28 @@
             --text-secondary: #8892b0;
             --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'El Messiri', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--primary-dark);
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
         }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* الشريط العلوي */
+        
+        /* Header */
         header {
             background-color: rgba(10, 25, 47, 0.85);
             padding: 20px 0;
@@ -49,29 +48,29 @@
             -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
         }
-
+        
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--accent);
             letter-spacing: 1px;
         }
-
+        
         .nav-links {
             display: flex;
             list-style: none;
         }
-
+        
         .nav-links li {
             margin-left: 40px;
         }
-
+        
         .nav-links a {
             text-decoration: none;
             color: var(--text-primary);
@@ -81,29 +80,29 @@
             padding: 5px 0;
             font-size: 0.9rem;
         }
-
+        
         .nav-links a::after {
             content: '';
             position: absolute;
             bottom: 0;
-            right: 0;
+            left: 0;
             width: 0;
             height: 2px;
             background-color: var(--accent);
             transition: var(--transition);
         }
-
+        
         .nav-links a:hover::after,
         .nav-links a.active::after {
             width: 100%;
         }
-
+        
         .nav-links a:hover,
         .nav-links a.active {
             color: var(--accent);
         }
-
-        /* قسم الهيرو */
+        
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -111,41 +110,41 @@
             padding: 120px 0 80px;
             position: relative;
         }
-
+        
         .hero-content {
             max-width: 800px;
         }
-
+        
         .hero-subtitle {
             color: var(--accent);
             font-size: 1.1rem;
             margin-bottom: 20px;
             font-weight: 500;
         }
-
+        
         .hero-title {
             font-size: 4rem;
             font-weight: 700;
             margin-bottom: 25px;
             line-height: 1.1;
         }
-
+        
         .hero-title span {
             color: var(--text-secondary);
         }
-
+        
         .hero-description {
             font-size: 1.2rem;
             color: var(--text-secondary);
             margin-bottom: 40px;
             max-width: 600px;
         }
-
+        
         .hero-buttons {
             display: flex;
             gap: 20px;
         }
-
+        
         .btn {
             display: inline-block;
             padding: 14px 32px;
@@ -155,87 +154,87 @@
             transition: var(--transition);
             font-size: 0.9rem;
         }
-
+        
         .btn-primary {
             background-color: var(--accent);
             color: var(--primary-dark);
             border: 1px solid var(--accent);
         }
-
+        
         .btn-primary:hover {
             background-color: transparent;
             color: var(--accent);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
         }
-
+        
         .btn-outline {
             background-color: transparent;
             border: 1px solid var(--accent);
             color: var(--accent);
         }
-
+        
         .btn-outline:hover {
             background-color: rgba(100, 255, 218, 0.1);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
         }
-
-        /* الأقسام العامة */
+        
+        /* Sections */
         .section {
             padding: 100px 0;
         }
-
+        
         .section-header {
             margin-bottom: 60px;
             position: relative;
             display: flex;
             align-items: center;
         }
-
+        
         .section-number {
             font-size: 1.5rem;
             color: var(--accent);
             font-weight: 700;
-            margin-left: 15px;
+            margin-right: 15px;
         }
-
+        
         .section-title {
             font-size: 2.2rem;
             font-weight: 700;
             position: relative;
         }
-
+        
         .section-title::after {
             content: '';
             position: absolute;
             bottom: -15px;
-            right: 0;
+            left: 0;
             width: 60px;
             height: 3px;
             background: var(--accent);
         }
-
-        /* قسم عني - تصميم جديد للصورة */
+        
+        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 60px;
             align-items: center;
         }
-
+        
         .about-text p {
             color: var(--text-secondary);
             margin-bottom: 25px;
             font-size: 1.1rem;
             line-height: 1.8;
         }
-
+        
         .about-image {
             position: relative;
             text-align: center;
         }
-
+        
         .image-container {
             width: 280px;
             height: 280px;
@@ -247,12 +246,12 @@
             box-shadow: 0 20px 40px rgba(100, 255, 218, 0.3);
             transition: var(--transition);
         }
-
+        
         .image-container:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 30px 60px rgba(100, 255, 218, 0.4);
         }
-
+        
         .profile-img {
             width: 100%;
             height: 100%;
@@ -261,11 +260,11 @@
             border: 3px solid var(--primary-dark);
             transition: var(--transition);
         }
-
+        
         .image-container:hover .profile-img {
             transform: scale(1.05);
         }
-
+        
         .image-decoration {
             position: absolute;
             top: -10px;
@@ -281,98 +280,91 @@
             font-size: 1.2rem;
             animation: float 3s ease-in-out infinite;
         }
-
+        
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
-
+        
         .education-info {
             margin-top: 30px;
             padding: 20px;
-            border-right: 3px solid var(--accent);
+            border-left: 3px solid var(--accent);
             background-color: var(--primary-light);
-            border-radius: 0 5px 5px 0;
+            border-radius: 5px 0 0 5px;
         }
-
+        
         .education-info h4 {
             color: var(--accent);
             font-size: 1.2rem;
             margin-bottom: 5px;
         }
-
+        
         .education-info p {
             font-size: 1rem;
             color: var(--text-primary);
         }
-
+        
         .education-info span {
             display: block;
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
-
+        
         .cv-download {
             margin-top: 20px;
             text-align: center;
         }
-
-        /* قسم الخبرة */
+        
+        /* Experience Section */
         .experience-list {
             position: relative;
-            padding-right: 20px;
+            padding-left: 20px;
         }
-
+        
         .experience-item {
             margin-bottom: 40px;
             padding: 20px;
             border-radius: 5px;
             background-color: var(--primary-light);
-            border-left: 3px solid var(--accent);
+            border-right: 3px solid var(--accent);
             transition: var(--transition);
         }
-
+        
         .experience-item:hover {
             box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-            transform: translateX(-5px);
+            transform: translateX(5px);
         }
-
+        
         .experience-item h3 {
             color: var(--accent);
             font-size: 1.4rem;
             margin-bottom: 5px;
         }
-
+        
         .experience-item p.company {
             font-size: 1.1rem;
             color: var(--text-primary);
             margin-bottom: 10px;
         }
-
+        
         .experience-item p.date {
             font-size: 0.9rem;
             color: var(--text-secondary);
             margin-bottom: 15px;
         }
-
-        /* قسم المهارات */
+        
+        /* Skills Section */
         .skills {
             background-color: var(--primary-light);
         }
-
+        
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
         }
-
+        
         .skill-category {
             background-color: rgba(17, 34, 64, 0.5);
             padding: 30px;
@@ -380,13 +372,13 @@
             transition: var(--transition);
             border: 1px solid rgba(100, 255, 218, 0.1);
         }
-
+        
         .skill-category:hover {
             transform: translateY(-5px);
             border-color: var(--accent);
             box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
         }
-
+        
         .skill-category h3 {
             font-size: 1.3rem;
             margin-bottom: 20px;
@@ -395,18 +387,18 @@
             align-items: center;
             gap: 10px;
         }
-
+        
         .skill-category h3 i {
             font-size: 1.5rem;
         }
-
+        
         .skill-list {
             list-style: none;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
-
+        
         .skill-list li {
             margin-bottom: 5px;
             color: var(--text-secondary);
@@ -414,20 +406,20 @@
             align-items: center;
             gap: 10px;
         }
-
+        
         .skill-list li::before {
             content: '▹';
             color: var(--accent);
             font-size: 0.8rem;
         }
-
-        /* قسم المشاريع */
+        
+        /* Projects Section */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
         }
-
+        
         .project-card {
             background-color: var(--primary-light);
             border-radius: 5px;
@@ -435,46 +427,46 @@
             transition: var(--transition);
             border: 1px solid rgba(100, 255, 218, 0.1);
         }
-
+        
         .project-card:hover {
             transform: translateY(-5px);
             border-color: var(--accent);
             box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
         }
-
+        
         .project-content {
             padding: 25px;
         }
-
+        
         .project-title {
             font-size: 1.3rem;
             margin-bottom: 15px;
             color: var(--text-primary);
         }
-
+        
         .project-title a {
             color: var(--text-primary);
             text-decoration: none;
             transition: var(--transition);
         }
-
+        
         .project-title a:hover {
             color: var(--accent);
         }
-
+        
         .project-description {
             color: var(--text-secondary);
             margin-bottom: 20px;
             line-height: 1.6;
         }
-
+        
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 20px;
         }
-
+        
         .project-tech span {
             background-color: rgba(100, 255, 218, 0.1);
             color: var(--accent);
@@ -482,87 +474,87 @@
             border-radius: 20px;
             font-size: 0.8rem;
         }
-
+        
         .project-links {
             display: flex;
             gap: 15px;
         }
-
+        
         .project-link {
             color: var(--text-primary);
             font-size: 1.2rem;
             transition: var(--transition);
         }
-
+        
         .project-link:hover {
             color: var(--accent);
             transform: translateY(-3px);
         }
-
-        /* قسم التواصل */
+        
+        /* Contact Section */
         .contact {
             background-color: var(--primary-light);
         }
-
+        
         .contact-content {
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
         }
-
+        
         .contact-content h2 {
             font-size: 3rem;
             color: var(--accent);
             margin-bottom: 20px;
         }
-
+        
         .contact-content p {
             font-size: 1.1rem;
             color: var(--text-secondary);
             margin-bottom: 40px;
         }
-
-        /* التذييل */
+        
+        /* Footer */
         footer {
             background-color: var(--primary-dark);
             padding: 50px 0 20px;
             border-top: 1px solid rgba(100, 255, 218, 0.1);
         }
-
+        
         .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 30px;
         }
-
+        
         .footer-logo {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--accent);
         }
-
+        
         .footer-links {
             display: flex;
             gap: 25px;
         }
-
+        
         .footer-links a {
             color: var(--text-secondary);
             text-decoration: none;
             transition: var(--transition);
             font-size: 0.9rem;
         }
-
+        
         .footer-links a:hover {
             color: var(--accent);
         }
-
+        
         .social-links {
             display: flex;
             gap: 15px;
         }
-
+        
         .social-links a {
             width: 40px;
             height: 40px;
@@ -575,13 +567,13 @@
             transition: var(--transition);
             font-size: 1.1rem;
         }
-
+        
         .social-links a:hover {
             background-color: var(--accent);
             color: var(--primary-dark);
             transform: translateY(-3px);
         }
-
+        
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -589,56 +581,56 @@
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
-
-        /* responsive */
+        
+        /* Responsive */
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
             }
-
+            
             .hero-title {
                 font-size: 3rem;
             }
-
+            
             .footer-content {
                 flex-direction: column;
                 gap: 20px;
                 text-align: center;
             }
         }
-
+        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-
+            
             .hero-title {
                 font-size: 2.5rem;
             }
-
+            
             .hero-buttons {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 15px;
             }
-
+            
             .projects-grid {
                 grid-template-columns: 1fr;
             }
-
+            
             .footer-links {
                 flex-direction: column;
                 gap: 15px;
             }
-
+            
             .skills-grid {
                 grid-template-columns: 1fr;
             }
-
+            
             .skill-list {
                 grid-template-columns: 1fr;
             }
-
+            
             .image-container {
                 width: 250px;
                 height: 250px;
@@ -646,88 +638,115 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Abdelruhman Eid</div>
+                <div class="logo">Abdelrahman Eid</div>
                 <ul class="nav-links">
-                    <li><a href="#home" class="active">الرئيسية</a></li>
-                    <li><a href="#about">عنّي</a></li>
-                    <li><a href="#experience">الخبرة</a></li>
-                    <li><a href="#skills">المهارات</a></li>
-                    <li><a href="#projects">المشاريع</a></li>
-                    <li><a href="#contact">التواصل</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <p class="hero-subtitle">مرحبًا، أنا</p>
-                <h1 class="hero-title">عبدالرحمن <span>رضا عيد</span></h1>
-                <p class="hero-description"> مهندس برمجيات | مطور PHP بخبرة عملية في بناء واجهات برمجية آمنة (RESTful APIs) ولوحات تحكم قابلة للتوسع. شغوف بالكود النظيف، التعلم المستمر، والمساهمة في تطبيقات الويب ذات التأثير الكبير. </p>
-                <div class="hero-buttons"> <a href="#projects" class="btn btn-primary">شاهد مشاريعي</a> <a href="#contact" class="btn btn-outline">تواصل معي</a> </div>
+                <p class="hero-subtitle">Hi, I'm</p>
+                <h1 class="hero-title">Abdelrahman <span>Reda Eid</span></h1>
+                <p class="hero-description">
+                    Software Engineer | PHP Developer with practical experience in building secure RESTful APIs and scalable dashboards. Passionate about clean code, continuous learning, and contributing to high-impact web applications.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
             </div>
         </div>
     </section>
+    
     <hr>
+
     <section id="about" class="section">
         <div class="container">
-            <div class="section-header"> <span class="section-number">01.</span>
-                <h2 class="section-title">عنّي والتعليم</h2>
+            <div class="section-header">
+                <span class="section-number">01.</span>
+                <h2 class="section-title">About Me & Education</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p> أنا مطور Laravel مبتدئ بخبرة عملية في إنشاء تطبيقات ويب قوية ومستقرة. أركز على تطوير الـ Backend وبناء أنظمة مصادقة متينة، واستخدام بنية MVC لتنظيم الكود. </p>
-                    <p> أسعى دائمًا لإنتاج كود نظيف وقابل للصيانة، وأمتلك فهمًا قويًا لقواعد البيانات العلائقية (SQL). متحمس للمساهمة في تطبيقات حقيقية عالية الأداء والعمل ضمن فريق تعاوني لتحقيق أفضل النتائج. </p>
+                    <p>
+                        I'm a Junior Laravel Developer with practical experience in creating robust and stable web applications. I focus on Backend development, building secure authentication systems, and using MVC architecture to organize code.
+                    </p>
+                    <p>
+                        I always strive to produce clean and maintainable code, and I have a strong understanding of relational databases (SQL). I'm excited to contribute to real-world high-performance applications and work within collaborative teams to achieve the best results.
+                    </p>
+                    
                     <div class="education-info">
-                        <h4>التعليم</h4>
-                        <p>بكالوريوس الهندسة</p> <span>جامعة المنوفية - تقدير جيد جداً</span>
-                        <div class="cv-download"> <a href="Abdelruhman_Reda.pdf" class="btn btn-primary">تحميل السيرة الذاتية</a> </div>
+                        <h4>Education</h4>
+                        <p>Bachelor of Engineering</p>
+                        <span>Menofia University - Very Good Grade</span>
+                        <div class="cv-download">
+                            <a href="Abdelrahman_Reda.pdf" class="btn btn-primary">Download CV</a>
+                        </div>
                     </div>
                 </div>
-                <div class="about-image"> <!-- تصميم جديد للصورة -->
+                <div class="about-image">
+                    <!-- New image design -->
                     <div class="image-container">
-                        <div class="image-decoration"> <i class="fas fa-code"></i> </div> <!-- رابط الصورة الخارجي --> <img src="abdo.jpg" alt="صورة عبدالرحمن رضا عيد" class="profile-img">
+                        <div class="image-decoration">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <!-- External image link -->
+                        <img src="abdo.jpg" alt="Abdelrahman Reda Eid" class="profile-img">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <hr>
+    
     <section id="experience" class="section">
         <div class="container">
-            <div class="section-header"> <span class="section-number">02.</span>
-                <h2 class="section-title">الخبرة العملية</h2>
+            <div class="section-header">
+                <span class="section-number">02.</span>
+                <h2 class="section-title">Work Experience</h2>
             </div>
             <div class="experience-list">
                 <div class="experience-item">
                     <h3>PHP Developer</h3>
-                    <p class="company">Vadecom, القاهرة - الجيزة</p>
-                    <p class="date">فبراير 2025 - حتى الآن</p>
-                    <p>أعمل على تطوير وتحسين تطبيقات الويب باستخدام Laravel، مع التركيز على بناء واجهات برمجية آمنة وقابلة للتوسع، وتطوير لوحات التحكم الإدارية.</p>
+                    <p class="company">Vadecom, Cairo - Giza</p>
+                    <p class="date">February 2025 - Present</p>
+                    <p>Working on developing and improving web applications using Laravel, focusing on building secure and scalable APIs, and developing admin dashboards.</p>
                 </div>
                 <div class="experience-item">
                     <h3>PHP Developer</h3>
-                    <p class="company">Pure Soft, المنوفية</p>
-                    <p class="date">يوليو 2023 - يناير 2024</p>
-                    <p>شاركت في تطوير مشاريع ويب متنوعة باستخدام Laravel، وبناء أنظمة مصادقة متكاملة، والعمل على تحسين أداء التطبيقات وقابليتها للتوسع.</p>
+                    <p class="company">Pure Soft, Menofia</p>
+                    <p class="date">July 2023 - January 2024</p>
+                    <p>Participated in developing various web projects using Laravel, building integrated authentication systems, and working on improving application performance and scalability.</p>
                 </div>
             </div>
         </div>
     </section>
+    
     <hr>
+
     <section id="skills" class="section skills">
         <div class="container">
-            <div class="section-header"> <span class="section-number">03.</span>
-                <h2 class="section-title">المهارات التقنية</h2>
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2 class="section-title">Technical Skills</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> التطوير الخلفي (Backend)</h3>
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
                     <ul class="skill-list">
                         <li>PHP</li>
                         <li>Laravel</li>
@@ -738,7 +757,7 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> التطوير الأمامي (Frontend)</h3>
+                    <h3><i class="fas fa-code"></i> Frontend Development</h3>
                     <ul class="skill-list">
                         <li>HTML</li>
                         <li>CSS</li>
@@ -748,7 +767,7 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> الأدوات والعمليات</h3>
+                    <h3><i class="fas fa-tools"></i> Tools & Processes</h3>
                     <ul class="skill-list">
                         <li>Git & GitHub</li>
                         <li>Composer</li>
@@ -760,88 +779,209 @@
             </div>
         </div>
     </section>
+
     <hr>
+
     <section id="projects" class="section">
         <div class="container">
-            <div class="section-header"> <span class="section-number">04.</span>
-                <h2 class="section-title">أبرز المشاريع</h2>
+            <div class="section-header">
+                <span class="section-number">04.</span>
+                <h2 class="section-title">Featured Projects</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Wedo</h3>
-                        <p class="project-description"> ساهمت كجزء من فريق التطوير في تحسين وصيانة المنصة، مع التركيز على ميزات الواجهة الخلفية وتحسين الأداء. قمت بتطوير وحدات جديدة وتحسين تجربة المستخدم من خلال تحسين سرعة الاستجابة ومعالجة البيانات بكفاءة عالية. </p>
-                        <div class="project-tech"> <span>Laravel</span> <span>Backend Development</span> <span>Performance Optimization</span> </div>
-                        <div class="project-links"> <a href="https://www.wedo.com.sa" class="project-link"><i class="fas fa-external-link-alt"></i></a> </div>
+                        <p class="project-description">
+                            Contributed as part of a development team to enhance and maintain the platform, focusing on backend features and performance improvements. Developed new modules and improved user experience through response speed optimization and efficient data processing.
+                        </p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>Backend Development</span>
+                            <span>Performance Optimization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.wedo.com.sa" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Mr Fix</h3>
-                        <p class="project-description"> بناء واجهات برمجية (APIs) ولوحة تحكم إدارية قائمة على Laravel. تم تطبيق نظام KYC متكامل (وجه/خلفية الهوية وصورة شخصية) باستخدام أحدث تقنيات التحقق. المنصة تربط العملاء بمقدمي الخدمات بشكل آمن وفعال مع نظام تقييم متقدم وإدارة للمعاملات المالية. </p>
-                        <div class="project-tech"> <span>Laravel</span> <span>APIs</span> <span>KYC System</span> <span>Payment Integration</span> </div>
-                        <div class="project-links"> <a href="https://mr-fix.org/" class="project-link"><i class="fas fa-external-link-alt"></i></a> </div>
+                        <p class="project-description">
+                            Built APIs and Laravel-based admin dashboard. Implemented a complete KYC system (ID front/back & selfie) using the latest verification technologies. Live platform connecting clients and service providers securely and effectively with advanced rating system and transaction management.
+                        </p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>APIs</span>
+                            <span>KYC System</span>
+                            <span>Payment Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://mr-fix.org/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Alfursan Travel</h3>
-                        <p class="project-description"> مشروع Laravel متكامل لحجز الرحلات الجوية مع نظام مصادقة متقدم وأدوات متطورة لإدارة الحجوزات. يتضمن النظام إدارة للرحلات والمسافرين وتقارير مالية مفصلة، مع دعم متعدد اللغات والعملات لتلبية احتياجات العملاء عالميًا. </p>
-                        <div class="project-tech"> <span>Laravel</span> <span>Authentication</span> <span>Booking System</span> <span>Multi-language</span> </div>
-                        <div class="project-links"> <a href="https://alfursantravel.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a> </div>
+                        <p class="project-description">
+                            Complete Laravel project for flight booking with advanced authentication and sophisticated booking management tools. Includes flight and passenger management, detailed financial reports, with multi-language and multi-currency support to meet global customer needs.
+                        </p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>Authentication</span>
+                            <span>Booking System</span>
+                            <span>Multi-language</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://alfursantravel.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Vadecom Admin Dashboard</h3>
-                        <p class="project-description"> ترقية شاملة لمنطق الواجهة الخلفية (Backend) وتحسين واجهة المستخدم (UI) للوحة تحكم Laravel الخاصة بموقع vadecom.net. تضمن المشروع إعادة هيكلة قواعد البيانات، تحسين أداء الاستعلامات، وإضافة ميزات إدارية متقدمة مع واجهة مستبدل أكثر سهولة واستجابة. </p>
-                        <div class="project-tech"> <span>Laravel</span> <span>UI/UX</span> <span>Database Optimization</span> <span>Admin Panel</span> </div>
-                        <div class="project-links"> <a href="https://vadecom.net" class="project-link"><i class="fas fa-external-link-alt"></i></a> </div>
+                        <p class="project-description">
+                            Comprehensive upgrade of backend logic and UI improvement for vadecom.net's Laravel dashboard. Included database restructuring, query performance optimization, and addition of advanced administrative features with more user-friendly and responsive interface.
+                        </p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>UI/UX</span>
+                            <span>Database Optimization</span>
+                            <span>Admin Panel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://vadecom.net" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Cement Tec Dashboard</h3>
-                        <p class="project-description"> صيانة وتطوير لوحة التحكم الإدارية لمنصة Cement Tec، مع تحسين العمليات الخلفية وزيادة كفاءة النظام. تضمن العمل إصلاح الأخطاء، تحسين أداء التطبيق، وإضافة ميزات جديدة لدعم احتياجات العمل المتزايدة في مجال صناعة الأسمنت والتشييد. </p>
-                        <div class="project-tech"> <span>Laravel</span> <span>System Maintenance</span> <span>Feature Development</span> <span>Bug Fixing</span> </div>
-                        <div class="project-links"> <a href="https://cement-tec.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a> </div>
+                        <p class="project-description">
+                            Maintenance and development of Cement Tec platform's admin dashboard, with backend process improvements and increased system efficiency. Included bug fixes, application performance optimization, and adding new features to support growing business needs in cement and construction industry.
+                        </p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>System Maintenance</span>
+                            <span>Feature Development</span>
+                            <span>Bug Fixing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://cement-tec.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Payroll System - Gomla Trade</h3>
-                        <p class="project-description"> نظام متكامل لكشوف المرتبات تم تطويره باستخدام Laravel. يتضمن النظام إدارة كاملة للموظفين، حساب الرواتب، الاستقطاعات، والمكافآت. تم تنفيذ ميزة متقدمة لتصدير سجلالموظفين والتقارير المالية إلى ملفات Excel مع تنسيقات مخصصة تلبي متطلبات المحاسبة والإدارة المالية. </p>
-                        <div class="project-tech"> <span>Laravel</span> <span>Excel Export</span> <span>Payroll Management</span> <span>Financial Reports</span> </div>
-                        <div class="project-links"> <a href="https://payroll.gomlatrade.net/" class="project-link"><i class="fas fa-external-link-alt"></i></a> </div>
+                        <p class="project-description">
+                            Comprehensive payroll system developed using Laravel. Includes complete employee management, salary calculation, deductions, and bonuses. Implemented advanced feature for exporting employee records and financial reports to Excel files with custom formats meeting accounting and financial management requirements.
+                        </p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>Excel Export</span>
+                            <span>Payroll Management</span>
+                            <span>Financial Reports</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://payroll.gomlatrade.net/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <hr>
+
     <section id="contact" class="section contact">
         <div class="container">
             <div class="contact-content">
-                <h2>تواصل معي</h2>
-                <p> إذا كنت تبحث عن مطور Laravel شغوف ومجتهد لمشروعك القادم، فلا تتردد في التواصل. أنا متاح دائمًا لمناقشة الفرص الجديدة والتعاون في مشاريع مبتكرة. </p> <a href="mailto:abdoredaeid905@gmail.com" class="btn btn-primary">إرسال بريد إلكتروني</a>
+                <h2>Get In Touch</h2>
+                <p>
+                    If you're looking for a passionate and dedicated Laravel developer for your next project, don't hesitate to reach out. I'm always available to discuss new opportunities and collaborate on innovative projects.
+                </p>
+                <a href="mailto:abdoredaeid905@gmail.com" class="btn btn-primary">Send Email</a>
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Abdelruhman Eid</div>
-                <div class="footer-links"> <a href="#home">الرئيسية</a> <a href="#about">عنّي</a> <a href="#experience">الخبرة</a> <a href="#skills">المهارات</a> <a href="#projects">المشاريع</a> <a href="#contact">التواصل</a> </div>
-                <div class="social-links"> <a href="https://github.com/Abdoredaeid11" target="_blank"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/abdulrahman-reda-6a7742225" target="_blank"><i class="fab fa-linkedin-in"></i></a> <a href="mailto:abdoredaeid905@gmail.com"><i class="fas fa-envelope"></i></a> <a href="tel:01068693865"><i class="fas fa-phone"></i></a> </div>
+                <div class="footer-logo">Abdelrahman Eid</div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Abdoredaeid11" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/abdulrahman-reda-6a7742225" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:abdoredaeid905@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:01068693865"><i class="fas fa-phone"></i></a>
+                </div>
             </div>
             <div class="copyright">
-                <p>© 2023 جميع الحقوق محفوظة | تم التصميم والتطوير بواسطة عبدالرحمن رضا عيد</p>
+                <p>© 2023 All Rights Reserved | Designed & Developed by Abdelrahman Reda Eid</p>
             </div>
         </div>
     </footer>
+
     <script>
-        // تأثيرات التمرير السلس document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); }); // إضافة تأثيرات عند التمرير window.addEventListener('scroll', function() { const elements = document.querySelectorAll('.skill-category, .project-card, .experience-item'); elements.forEach(element => { const position = element.getBoundingClientRect().top; const screenPosition = window.innerHeight / 1.3; if(position < screenPosition) { element.style.opacity = 1; element.style.transform = 'translateY(0)'; } }); // تغيير حالة الروابط في الشريط العلوي const sections = document.querySelectorAll('section'); const navLinks = document.querySelectorAll('.nav-links a'); sections.forEach(section => { const rect = section.getBoundingClientRect(); if (rect.top <= 150 && rect.bottom >= 150) { navLinks.forEach(link => { link.classList.remove('active'); if (link.getAttribute('href').substring(1) === section.id) { link.classList.add('active'); } }); } }); }); // تهيئة العناصر قبل التمرير document.querySelectorAll('.skill-category, .project-card, .experience-item').forEach(element => { element.style.opacity = 0; element.style.transform = 'translateY(20px)'; element.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; });
+        // Smooth scrolling effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add effects on scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.skill-category, .project-card, .experience-item');
+            
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if(position < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+            
+            // Change header links state
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 150 && rect.bottom >= 150) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === section.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Initialize elements before scroll
+        document.querySelectorAll('.skill-category, .project-card, .experience-item').forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
     </script>
 </body>
-
 </html>
