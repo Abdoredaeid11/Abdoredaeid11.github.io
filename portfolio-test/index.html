@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بورتفوليو | عبدالرحمن رضا عيد</title>
+    <title>Portfolio | Abdelrahman Reda Eid</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-dark: #0a192f;
@@ -23,7 +23,7 @@
         }
         
         body {
-            font-family: 'El Messiri', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--primary-dark);
             color: var(--text-primary);
             line-height: 1.6;
@@ -36,7 +36,7 @@
             padding: 0 20px;
         }
         
-        /* الشريط العلوي */
+        /* Header */
         header {
             background-color: rgba(10, 25, 47, 0.85);
             padding: 20px 0;
@@ -85,7 +85,7 @@
             content: '';
             position: absolute;
             bottom: 0;
-            right: 0;
+            left: 0;
             width: 0;
             height: 2px;
             background-color: var(--accent);
@@ -102,7 +102,7 @@
             color: var(--accent);
         }
         
-        /* قسم الهيرو */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -180,7 +180,7 @@
             box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
         }
         
-        /* الأقسام العامة */
+        /* Sections */
         .section {
             padding: 100px 0;
         }
@@ -196,7 +196,7 @@
             font-size: 1.5rem;
             color: var(--accent);
             font-weight: 700;
-            margin-left: 15px;
+            margin-right: 15px;
         }
         
         .section-title {
@@ -209,13 +209,13 @@
             content: '';
             position: absolute;
             bottom: -15px;
-            right: 0;
+            left: 0;
             width: 60px;
             height: 3px;
             background: var(--accent);
         }
         
-        /* قسم عني - تصميم جديد للصورة */
+        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -289,9 +289,9 @@
         .education-info {
             margin-top: 30px;
             padding: 20px;
-            border-right: 3px solid var(--accent);
+            border-left: 3px solid var(--accent);
             background-color: var(--primary-light);
-            border-radius: 0 5px 5px 0;
+            border-radius: 5px 0 0 5px;
         }
         
         .education-info h4 {
@@ -316,10 +316,10 @@
             text-align: center;
         }
         
-        /* قسم الخبرة */
+        /* Experience Section */
         .experience-list {
             position: relative;
-            padding-right: 20px;
+            padding-left: 20px;
         }
         
         .experience-item {
@@ -327,13 +327,13 @@
             padding: 20px;
             border-radius: 5px;
             background-color: var(--primary-light);
-            border-left: 3px solid var(--accent);
+            border-right: 3px solid var(--accent);
             transition: var(--transition);
         }
         
         .experience-item:hover {
             box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-            transform: translateX(-5px);
+            transform: translateX(5px);
         }
         
         .experience-item h3 {
@@ -354,7 +354,7 @@
             margin-bottom: 15px;
         }
         
-        /* قسم المهارات */
+        /* Skills Section */
         .skills {
             background-color: var(--primary-light);
         }
@@ -413,7 +413,7 @@
             font-size: 0.8rem;
         }
         
-        /* قسم المشاريع */
+        /* Projects Section */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -491,7 +491,7 @@
             transform: translateY(-3px);
         }
         
-        /* قسم التواصل */
+        /* Contact Section */
         .contact {
             background-color: var(--primary-light);
         }
@@ -514,7 +514,7 @@
             margin-bottom: 40px;
         }
         
-        /* التذييل */
+        /* Footer */
         footer {
             background-color: var(--primary-dark);
             padding: 50px 0 20px;
@@ -582,7 +582,7 @@
             font-size: 0.9rem;
         }
         
-        /* responsive */
+        /* Responsive */
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
@@ -642,14 +642,14 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Abdelruhman Eid</div>
+                <div class="logo">Abdelrahman Eid</div>
                 <ul class="nav-links">
-                    <li><a href="#home" class="active">الرئيسية</a></li>
-                    <li><a href="#about">عنّي</a></li>
-                    <li><a href="#experience">الخبرة</a></li>
-                    <li><a href="#skills">المهارات</a></li>
-                    <li><a href="#projects">المشاريع</a></li>
-                    <li><a href="#contact">التواصل</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -658,14 +658,14 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <p class="hero-subtitle">مرحبًا، أنا</p>
-                <h1 class="hero-title">عبدالرحمن <span>رضا عيد</span></h1>
+                <p class="hero-subtitle">Hi, I'm</p>
+                <h1 class="hero-title">Abdelrahman <span>Reda Eid</span></h1>
                 <p class="hero-description">
-                    مهندس برمجيات | مطور PHP بخبرة عملية في بناء واجهات برمجية آمنة (RESTful APIs) ولوحات تحكم قابلة للتوسع. شغوف بالكود النظيف، التعلم المستمر، والمساهمة في تطبيقات الويب ذات التأثير الكبير.
+                    Software Engineer | PHP Developer with practical experience in building secure RESTful APIs and scalable dashboards. Passionate about clean code, continuous learning, and contributing to high-impact web applications.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">شاهد مشاريعي</a>
-                    <a href="#contact" class="btn btn-outline">تواصل معي</a>
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -677,34 +677,34 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">01.</span>
-                <h2 class="section-title">عنّي والتعليم</h2>
+                <h2 class="section-title">About Me & Education</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        أنا مطور Laravel مبتدئ بخبرة عملية في إنشاء تطبيقات ويب قوية ومستقرة. أركز على تطوير الـ Backend وبناء أنظمة مصادقة متينة، واستخدام بنية MVC لتنظيم الكود.
+                        I'm a Junior Laravel Developer with practical experience in creating robust and stable web applications. I focus on Backend development, building secure authentication systems, and using MVC architecture to organize code.
                     </p>
                     <p>
-                        أسعى دائمًا لإنتاج كود نظيف وقابل للصيانة، وأمتلك فهمًا قويًا لقواعد البيانات العلائقية (SQL). متحمس للمساهمة في تطبيقات حقيقية عالية الأداء والعمل ضمن فريق تعاوني لتحقيق أفضل النتائج.
+                        I always strive to produce clean and maintainable code, and I have a strong understanding of relational databases (SQL). I'm excited to contribute to real-world high-performance applications and work within collaborative teams to achieve the best results.
                     </p>
                     
                     <div class="education-info">
-                        <h4>التعليم</h4>
-                        <p>بكالوريوس الهندسة</p>
-                        <span>جامعة المنوفية - تقدير جيد جداً</span>
+                        <h4>Education</h4>
+                        <p>Bachelor of Engineering</p>
+                        <span>Menofia University - Very Good Grade</span>
                         <div class="cv-download">
-                            <a href="Abdelruhman_Reda.pdf" class="btn btn-primary">تحميل السيرة الذاتية</a>
+                            <a href="Abdelrahman_Reda.pdf" class="btn btn-primary">Download CV</a>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <!-- تصميم جديد للصورة -->
+                    <!-- New image design -->
                     <div class="image-container">
                         <div class="image-decoration">
                             <i class="fas fa-code"></i>
                         </div>
-                        <!-- رابط الصورة الخارجي -->
-                        <img src="abdo.jpg" alt="صورة عبدالرحمن رضا عيد" class="profile-img">
+                        <!-- External image link -->
+                        <img src="abdo.jpg" alt="Abdelrahman Reda Eid" class="profile-img">
                     </div>
                 </div>
             </div>
@@ -717,20 +717,20 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">02.</span>
-                <h2 class="section-title">الخبرة العملية</h2>
+                <h2 class="section-title">Work Experience</h2>
             </div>
             <div class="experience-list">
                 <div class="experience-item">
                     <h3>PHP Developer</h3>
-                    <p class="company">Vadecom, القاهرة - الجيزة</p>
-                    <p class="date">فبراير 2025 - حتى الآن</p>
-                    <p>أعمل على تطوير وتحسين تطبيقات الويب باستخدام Laravel، مع التركيز على بناء واجهات برمجية آمنة وقابلة للتوسع، وتطوير لوحات التحكم الإدارية.</p>
+                    <p class="company">Vadecom, Cairo - Giza</p>
+                    <p class="date">February 2025 - Present</p>
+                    <p>Working on developing and improving web applications using Laravel, focusing on building secure and scalable APIs, and developing admin dashboards.</p>
                 </div>
                 <div class="experience-item">
                     <h3>PHP Developer</h3>
-                    <p class="company">Pure Soft, المنوفية</p>
-                    <p class="date">يوليو 2023 - يناير 2024</p>
-                    <p>شاركت في تطوير مشاريع ويب متنوعة باستخدام Laravel، وبناء أنظمة مصادقة متكاملة، والعمل على تحسين أداء التطبيقات وقابليتها للتوسع.</p>
+                    <p class="company">Pure Soft, Menofia</p>
+                    <p class="date">July 2023 - January 2024</p>
+                    <p>Participated in developing various web projects using Laravel, building integrated authentication systems, and working on improving application performance and scalability.</p>
                 </div>
             </div>
         </div>
@@ -742,11 +742,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">03.</span>
-                <h2 class="section-title">المهارات التقنية</h2>
+                <h2 class="section-title">Technical Skills</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> التطوير الخلفي (Backend)</h3>
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
                     <ul class="skill-list">
                         <li>PHP</li>
                         <li>Laravel</li>
@@ -757,7 +757,7 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> التطوير الأمامي (Frontend)</h3>
+                    <h3><i class="fas fa-code"></i> Frontend Development</h3>
                     <ul class="skill-list">
                         <li>HTML</li>
                         <li>CSS</li>
@@ -767,7 +767,7 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> الأدوات والعمليات</h3>
+                    <h3><i class="fas fa-tools"></i> Tools & Processes</h3>
                     <ul class="skill-list">
                         <li>Git & GitHub</li>
                         <li>Composer</li>
@@ -786,14 +786,14 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">04.</span>
-                <h2 class="section-title">أبرز المشاريع</h2>
+                <h2 class="section-title">Featured Projects</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Wedo</h3>
                         <p class="project-description">
-                            ساهمت كجزء من فريق التطوير في تحسين وصيانة المنصة، مع التركيز على ميزات الواجهة الخلفية وتحسين الأداء. قمت بتطوير وحدات جديدة وتحسين تجربة المستخدم من خلال تحسين سرعة الاستجابة ومعالجة البيانات بكفاءة عالية.
+                            Contributed as part of a development team to enhance and maintain the platform, focusing on backend features and performance improvements. Developed new modules and improved user experience through response speed optimization and efficient data processing.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
@@ -809,7 +809,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Mr Fix</h3>
                         <p class="project-description">
-                            بناء واجهات برمجية (APIs) ولوحة تحكم إدارية قائمة على Laravel. تم تطبيق نظام KYC متكامل (وجه/خلفية الهوية وصورة شخصية) باستخدام أحدث تقنيات التحقق. المنصة تربط العملاء بمقدمي الخدمات بشكل آمن وفعال مع نظام تقييم متقدم وإدارة للمعاملات المالية.
+                            Built APIs and Laravel-based admin dashboard. Implemented a complete KYC system (ID front/back & selfie) using the latest verification technologies. Live platform connecting clients and service providers securely and effectively with advanced rating system and transaction management.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
@@ -826,7 +826,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Alfursan Travel</h3>
                         <p class="project-description">
-                            مشروع Laravel متكامل لحجز الرحلات الجوية مع نظام مصادقة متقدم وأدوات متطورة لإدارة الحجوزات. يتضمن النظام إدارة للرحلات والمسافرين وتقارير مالية مفصلة، مع دعم متعدد اللغات والعملات لتلبية احتياجات العملاء عالميًا.
+                            Complete Laravel project for flight booking with advanced authentication and sophisticated booking management tools. Includes flight and passenger management, detailed financial reports, with multi-language and multi-currency support to meet global customer needs.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
@@ -843,7 +843,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Vadecom Admin Dashboard</h3>
                         <p class="project-description">
-                            ترقية شاملة لمنطق الواجهة الخلفية (Backend) وتحسين واجهة المستخدم (UI) للوحة تحكم Laravel الخاصة بموقع vadecom.net. تضمن المشروع إعادة هيكلة قواعد البيانات، تحسين أداء الاستعلامات، وإضافة ميزات إدارية متقدمة مع واجهة مستبدل أكثر سهولة واستجابة.
+                            Comprehensive upgrade of backend logic and UI improvement for vadecom.net's Laravel dashboard. Included database restructuring, query performance optimization, and addition of advanced administrative features with more user-friendly and responsive interface.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
@@ -860,7 +860,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Cement Tec Dashboard</h3>
                         <p class="project-description">
-                            صيانة وتطوير لوحة التحكم الإدارية لمنصة Cement Tec، مع تحسين العمليات الخلفية وزيادة كفاءة النظام. تضمن العمل إصلاح الأخطاء، تحسين أداء التطبيق، وإضافة ميزات جديدة لدعم احتياجات العمل المتزايدة في مجال صناعة الأسمنت والتشييد.
+                            Maintenance and development of Cement Tec platform's admin dashboard, with backend process improvements and increased system efficiency. Included bug fixes, application performance optimization, and adding new features to support growing business needs in cement and construction industry.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
@@ -877,7 +877,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Payroll System - Gomla Trade</h3>
                         <p class="project-description">
-                            نظام متكامل لكشوف المرتبات تم تطويره باستخدام Laravel. يتضمن النظام إدارة كاملة للموظفين، حساب الرواتب، الاستقطاعات، والمكافآت. تم تنفيذ ميزة متقدمة لتصدير سجلالموظفين والتقارير المالية إلى ملفات Excel مع تنسيقات مخصصة تلبي متطلبات المحاسبة والإدارة المالية.
+                            Comprehensive payroll system developed using Laravel. Includes complete employee management, salary calculation, deductions, and bonuses. Implemented advanced feature for exporting employee records and financial reports to Excel files with custom formats meeting accounting and financial management requirements.
                         </p>
                         <div class="project-tech">
                             <span>Laravel</span>
@@ -899,11 +899,11 @@
     <section id="contact" class="section contact">
         <div class="container">
             <div class="contact-content">
-                <h2>تواصل معي</h2>
+                <h2>Get In Touch</h2>
                 <p>
-                    إذا كنت تبحث عن مطور Laravel شغوف ومجتهد لمشروعك القادم، فلا تتردد في التواصل. أنا متاح دائمًا لمناقشة الفرص الجديدة والتعاون في مشاريع مبتكرة.
+                    If you're looking for a passionate and dedicated Laravel developer for your next project, don't hesitate to reach out. I'm always available to discuss new opportunities and collaborate on innovative projects.
                 </p>
-                <a href="mailto:abdoredaeid905@gmail.com" class="btn btn-primary">إرسال بريد إلكتروني</a>
+                <a href="mailto:abdoredaeid905@gmail.com" class="btn btn-primary">Send Email</a>
             </div>
         </div>
     </section>
@@ -911,14 +911,14 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Abdelruhman Eid</div>
+                <div class="footer-logo">Abdelrahman Eid</div>
                 <div class="footer-links">
-                    <a href="#home">الرئيسية</a>
-                    <a href="#about">عنّي</a>
-                    <a href="#experience">الخبرة</a>
-                    <a href="#skills">المهارات</a>
-                    <a href="#projects">المشاريع</a>
-                    <a href="#contact">التواصل</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/Abdoredaeid11" target="_blank"><i class="fab fa-github"></i></a>
@@ -928,13 +928,13 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2023 جميع الحقوق محفوظة | تم التصميم والتطوير بواسطة عبدالرحمن رضا عيد</p>
+                <p>© 2023 All Rights Reserved | Designed & Developed by Abdelrahman Reda Eid</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // تأثيرات التمرير السلس
+        // Smooth scrolling effects
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -945,7 +945,7 @@
             });
         });
 
-        // إضافة تأثيرات عند التمرير
+        // Add effects on scroll
         window.addEventListener('scroll', function() {
             const elements = document.querySelectorAll('.skill-category, .project-card, .experience-item');
             
@@ -959,7 +959,7 @@
                 }
             });
             
-            // تغيير حالة الروابط في الشريط العلوي
+            // Change header links state
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-links a');
             
@@ -976,7 +976,7 @@
             });
         });
 
-        // تهيئة العناصر قبل التمرير
+        // Initialize elements before scroll
         document.querySelectorAll('.skill-category, .project-card, .experience-item').forEach(element => {
             element.style.opacity = 0;
             element.style.transform = 'translateY(20px)';
@@ -985,5 +985,3 @@
     </script>
 </body>
 </html>
-
-
